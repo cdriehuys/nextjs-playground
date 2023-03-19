@@ -7,7 +7,7 @@ export default function Home() {
         <title>My App</title>
       </Head>
       <main>
-        <h1>My App</h1>
+        <h1 className="text-3xl">My App</h1>
       </main>
     </>
   )
