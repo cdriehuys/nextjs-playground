@@ -12,9 +12,11 @@ export default function Home() {
 
         <h2 className="text-xl">Pages</h2>
         <ul>
-          <li><Link href="/log-in">Log In</Link></li>
+          <li>
+            <Link href="/log-in">Log In</Link>
+          </li>
         </ul>
       </main>
     </>
-  )
+  );
 }
