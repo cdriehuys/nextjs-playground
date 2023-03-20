@@ -9,7 +9,10 @@
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	"forwardPorts": [
+		// Next.js dev server
+		3000,
+	],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "yarn install",
@@ -18,7 +21,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"patbenatar.advanced-new-file"
+				"bradlc.vscode-tailwindcss",
+				"patbenatar.advanced-new-file",
 			]
 		}
 	},
