@@ -10,11 +10,11 @@ interface InputProps {
 
 const Input = ({ id, label, name, placeholder, type }: InputProps) => (
   <div className="mb-4">
-    <label className="block font-bold mb-2" htmlFor={id}>
+    <label className="mb-2 block font-bold" htmlFor={id}>
       {label}
     </label>
     <input
-      className="shadow w-full py-2 px-3 appearance-none border focus:outline-none focus:ring leading-tight"
+      className="w-full appearance-none border py-2 px-3 leading-tight shadow focus:outline-none focus:ring"
       id={id}
       name={name}
       placeholder={placeholder}
@@ -25,8 +25,8 @@ const Input = ({ id, label, name, placeholder, type }: InputProps) => (
 
 export default function LogInPage() {
   return (
-    <section className="container max-w-md mx-auto p-2">
-      <h1 className="text-3xl mb-4">Log In</h1>
+    <section className="container mx-auto max-w-md p-2">
+      <h1 className="mb-4 text-3xl">Log In</h1>
 
       <form>
         <Input
@@ -45,7 +45,7 @@ export default function LogInPage() {
         />
 
         <button
-          className="shadow bg-blue-500 text-white py-2 px-3 hover:bg-blue-700"
+          className="bg-blue-500 py-2 px-3 text-white shadow hover:bg-blue-700"
           type="submit"
         >
           Log In
