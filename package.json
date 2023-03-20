@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "style:check": "prettier --check .",
-    "style:fix": "prettier --write ."
+    "style:fix": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "@types/node": "18.15.3",
@@ -24,6 +28,8 @@
   "devDependencies": {
     "autoprefixer": "10.4.14",
     "eslint-config-prettier": "8.7.0",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.0",
     "postcss": "8.4.21",
     "prettier": "2.8.5",
     "prettier-plugin-tailwindcss": "0.2.5",
