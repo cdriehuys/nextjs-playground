@@ -8,6 +8,9 @@ export default function Home() {
         <li>
           <Link href="/log-in">Log In</Link>
         </li>
+        <li>
+          <Link href="/register">Register</Link>
+        </li>
       </ul>
     </>
   );
