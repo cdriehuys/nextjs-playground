@@ -1,14 +1,14 @@
-import { HTMLInputTypeAttribute } from "react";
+import { Ref, forwardRef } from "react";
 
-interface InputProps {
+interface InputProps extends React.HTMLProps<HTMLInputElement> {
   id: string;
   label: string;
-  name: string;
-  placeholder?: string;
-  type: HTMLInputTypeAttribute;
 }
 
-const Input = ({ id, label, name, placeholder, type }: InputProps) => (
+const Input = (
+  { id, label, ...rest }: InputProps,
+  ref: Ref<HTMLInputElement>
+) => (
   <div className="mb-4">
     <label className="mb-2 block font-bold" htmlFor={id}>
       {label}
@@ -16,11 +16,11 @@ const Input = ({ id, label, name, placeholder, type }: InputProps) => (
     <input
       className="w-full appearance-none border py-2 px-3 leading-tight shadow focus:outline-none focus:ring"
       id={id}
-      name={name}
-      placeholder={placeholder}
-      type={type}
+      // Forward the ref for usage with react-hook-form
+      ref={ref}
+      {...rest}
     />
   </div>
 );
 
-export default Input;
+export default forwardRef(Input);

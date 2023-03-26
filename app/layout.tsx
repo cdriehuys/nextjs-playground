@@ -1,4 +1,6 @@
 import Link from "next/link";
+
+import GlobalProviders from "@/components/GlobalProviders";
 import "./global.css";
 
 export const metadata = {
@@ -24,8 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main>{children}</main>
+        <GlobalProviders>
+          <Header />
+          <main>{children}</main>
+        </GlobalProviders>
       </body>
     </html>
   );
