@@ -1,7 +1,7 @@
 "use client";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import AuthContextProvider from "./auth/AuthContext";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 
 const queryClient = new QueryClient();
 
@@ -12,7 +12,7 @@ interface Props {
 export default function GlobalProviders({ children }: Props) {
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthContextProvider>{children}</AuthContextProvider>
+      <UserProvider>{children}</UserProvider>
     </QueryClientProvider>
   );
 }

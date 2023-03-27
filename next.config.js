@@ -9,7 +9,7 @@ const nextConfig = {
   reactStrictMode: true,
   rewrites: async () => [
     {
-      source: "/api/:path*",
+      source: "/api/proxy/:path*",
       destination: `${API_ROOT}/:path*`,
     },
   ],

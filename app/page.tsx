@@ -1,17 +1,16 @@
-import Link from "next/link";
-
 export default function Home() {
   return (
-    <>
-      <h2 className="text-xl">Pages</h2>
-      <ul>
+    <section className="mx-auto max-w-4xl">
+      <h2 className="mb-4 text-3xl">Pages</h2>
+      <ul className="list-inside list-disc">
         <li>
-          <Link href="/log-in">Log In</Link>
-        </li>
-        <li>
-          <Link href="/register">Register</Link>
+          {/* Use an anchor tag as instructed by @auth0/nextjs-auth0 */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a className="text-blue-500 underline" href="/api/auth/login">
+            Auth0 Log In
+          </a>
         </li>
       </ul>
-    </>
+    </section>
   );
 }

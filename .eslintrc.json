@@ -9,6 +9,8 @@
     // Disable built-in rule in favor of the `unused-import` plugin.
     "no-unused-vars": "off",
 
+    "@next/next/no-html-link-for-pages": "error",
+
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
       "warn",
