@@ -1,3 +1,5 @@
+import UserStatus from "@/components/UserStatus";
+
 export default function Home() {
   return (
     <section className="mx-auto max-w-4xl">
@@ -10,7 +12,15 @@ export default function Home() {
             Auth0 Log In
           </a>
         </li>
+        <li>
+          {/* Use an anchor tag as instructed by @auth0/nextjs-auth0 */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a className="text-blue-500 underline" href="/api/auth/logout">
+            Log Out
+          </a>
+        </li>
       </ul>
+      <UserStatus />
     </section>
   );
 }
